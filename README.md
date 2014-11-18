@@ -24,19 +24,19 @@ Installation Documentation
 	* screenshots
 7. Follow this tutorial for basic setup: http://elinux.org/RPi_Beginners
 	* sudo raspi-config
-	** Expand filesystem to fit all 16gb SD card
-	** Change user password
-	** Setup timezone
-	** Enable SSH
-	** Update raspi-config
-	** Screenshots
+	  * Expand filesystem to fit all 16gb SD card
+	  * Change user password
+	  * Setup timezone
+	  * Enable SSH
+	  * Update raspi-config
+	  * Screenshots
 8. Update repo and software based on this guide: http://elinux.org/index.php?title=Add_software_to_Raspberry_Pi&redirect=no
 	* sudo apt-get update
 	* sudo apt-get upgrade
 9. Install SAMBA for easy sharing of files over network based on this guide: http://raspberrywebserver.com/serveradmin/share-your-raspberry-pis-files-and-folders-across-a-network.html
 	* sudo apt-get install samba samba-common-bin
 	* sudo nano /etc/samba/smb.conf
-		** Added the following configuration: `[pihome]
+	  * Added the following configuration: `[pihome]
    comment= Pi Home
    path=/home/pi
    browseable=Yes
@@ -45,8 +45,9 @@ Installation Documentation
    create mask=0777
    directory mask=0777
    public=no`
-   		** Un-comment wins `support = yes`
-   * sudo smbpasswd -a pi
-   		** Set the password to the SAMBA login
-   * sudo /etc/init.d/samba restart
-   		** restarts SAMBA and allows us to use the drive
+   	  * Un-comment wins `support = yes`
+   	* sudo smbpasswd -a pi
+   	  * Set the password to the SAMBA login
+   	* sudo /etc/init.d/samba restart
+   	  * restarts SAMBA and allows us to use the drive
+   	* screenshot
