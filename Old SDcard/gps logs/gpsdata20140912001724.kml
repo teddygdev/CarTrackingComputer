@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+<name>Paths</name>
+<description><![CDATA[Test Car
+RPI20140912001724
+Created by GPSKLogger on Raspberry Pi.]]>
+</description>
+ <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <LineStyle>
+      <color>800000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/red-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+<Placemark>
+   <name>RPI20140912001724(Start) </name>
+   <description><![CDATA[]]0.0></description>
+   <styleUrl>#style1</styleUrl>
+   <Point>
+      <coordinates>23.343483959, 42.690618319,563.988</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name>RPI20140912001724</name>
+   <description><![CDATA[]]0.0></description>
+   <styleUrl>#style1</styleUrl>
+   <LineString>
+       <extrude>1</extrude>
+       <tessellate>1</tessellate>
+       <altitudeMode>absolute</altitudeMode>
+       <coordinates>
+ 23.343483959,42.690618319, 563.988
+ 23.343483959,42.690611703, 563.31
+ 23.343483959,42.690605087, 562.632
+ 23.343488794,42.690610691, 561.957
+ 23.343493628,42.69062291, 561.96
+ 23.343482426,42.690625329, 561.669
+ 23.343493628,42.69062291, 561.96
+ 23.343498463,42.690628514, 561.285
+ 23.343503298,42.690640734, 561.288
+ 23.343519336,42.690650535, 561.583
+ 23.34352417,42.690656139, 560.908
+       </coordinates>
+   </LineString>
+</Placemark>
+<Placemark>
+   <name>RPI20140912001724(End) </name>
+   <description><![CDATA[]]></description>
+   <styleUrl>#style1</styleUrl>
+   <Point>
+      <coordinates>23.34352417, 42.690656139, 560.908</coordinates>
+   </Point>
+</Placemark>
+</Document>
+</kml>

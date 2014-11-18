@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+<name>Paths</name>
+<description><![CDATA[trail hiking
+RPI20140911234214
+Created by GPSKLogger on Raspberry Pi.]]>
+</description>
+ <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/grn-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <LineStyle>
+      <color>800000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/kml/paddle/red-circle_maps.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+<Placemark>
+   <name>RPI20140911234214(Start) </name>
+   <description><![CDATA[]]></description>
+   <styleUrl>#style1</styleUrl>
+   <Point>
+      <coordinates>23.343471223, 42.690607899,559.343</coordinates>
+   </Point>
+</Placemark>
+<Placemark>
+   <name>RPI20140911234214</name>
+   <description><![CDATA[]]></description>
+   <styleUrl>#style1</styleUrl>
+   <LineString>
+       <extrude>1</extrude>
+       <tessellate>1</tessellate>
+       <altitudeMode>absolute</altitudeMode>
+       <coordinates>
+ 23.343471223,42.690607899, 559.343
+ 23.343482426,42.690605481, 559.635
+ 23.343503298,42.690614269, 558.576
+ 23.343519336,42.690624071, 558.871
+ 23.343535373,42.690627256, 558.487
+ 23.343551411,42.690630441, 558.103
+ 23.343583486,42.690636812, 557.336
+ 23.343589854,42.690635406, 558.98
+ 23.343601057,42.690639604, 559.95
+ 23.343596222,42.690634, 560.625
+ 23.343580185,42.690637431, 561.686
+ 23.34357535,42.690625211, 561.683
+ 23.343549643,42.690610819, 563.416
+ 23.343544808,42.690605215, 564.091
+ 23.343560845,42.690615017, 564.386
+ 23.343560845,42.690608401, 563.708
+ 23.343560845,42.690615017, 564.386
+ 23.343576883,42.690624818, 564.68
+ 23.343597755,42.690640223, 564.3
+       </coordinates>
+   </LineString>
+</Placemark>
+<Placemark>
+   <name>RPI20140911234214(End) </name>
+   <description><![CDATA[]]></description>
+   <styleUrl>#style1</styleUrl>
+   <Point>
+      <coordinates>23.343597755, 42.690640223, 564.3</coordinates>
+   </Point>
+</Placemark>
+</Document>
+</kml>

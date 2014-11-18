@@ -12,3 +12,6 @@ Installation Documentation
 	* The tool format a current installation of Raspbian due to hidden partitions
 3. Download Win32 DiskImage from http://www.raspberrypi.org/documentation/installation/installing-images/windows.md
 	* Used to install a new Raspbian on the SD card
+4. Format the current SD card to a clean slate. Use FAT32
+	*Chose the name RASBPI for the SD card
+	*Screenshots
