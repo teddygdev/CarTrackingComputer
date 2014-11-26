@@ -83,9 +83,44 @@ i2c-dev`
 hwclock -s`
 	* sudo update-rc.d ntp disable //notsure
 	* sudo update-rc.d fake-hwclock disable //notsure
-14. Setup 3g router
+14. Setup 3g router //explain further pls
 	* http://raspberry-at-home.com/installing-3g-modem/#more-138
 	* https://github.com/Trixarian/sakis3g-source
 	* http://www.androidbg.com/forum/topic55016-wifirkovodstvo-3g-vrzka-za-nexus-7-wifi-chrez-usb-modem.html
 	* https://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
 	* had to recompile, need to install usb mode switch
+15. Replace component headers with extra long ones
+	* describe here <<<<<<<
+	* pictures
+16. Install USB GPS following this guide http://blog.retep.org/2012/06/18/getting-gps-to-work-on-a-raspberry-pi/
+	* sudo apt-get install gpsd gpsd-clients python-gps
+	* sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock.
+	* cgps -s and wait for lock-on
+17. Set time to GPS time from guide http://blog.petrilopia.net/linux/raspberry-pi-set-time-gps-dongle/
+	* Use stGpsTime.sh script
+	* ./setGpsTime.sh
+	* sudo hwclock -s
+	* Now we are adjusted to GPS time on the hwclock as well
+18. Try logging data following this guide http://www.danmandle.com/blog/getting-gpsd-to-work-with-python/
+	* Use gpsdData.py script to use it
+19. Get SQLite running following this guide http://www.raspberrypiblog.com/2012/11/getting-started-with-databases-on-pi.html and this one as well http://www.python-sqlite-database.com/Python_SQLite_Databases.pdf
+	* sudo apt-get install sqlite3
+	* sqlite3 MyFirstDatabase.db
+20. Modify the gpsdData.py script to log the data in its own database
+	* 
+21. Create Car Friendly power supply as well as shutdown controller
+	* http://electronics.stackexchange.com/questions/61877/shutdown-controller-for-raspberry-pi-in-a-car
+22. Test out the gpio pins for the shutdown controller
+23. Create a shutdown script for pin 25
+	* gpio.py
+24. Setup GPS for production
+	* sudo killall gpsd
+	* sudo gpsd /dev/ttyUSB0 -n -F /var/run/gpsd.sock
+25. Create mainScript.py that will run everytime on the Pi
+	* add gps column heading to db
+	* write gps heading
+	* shutting down
+	* status led
+	* saving gps and compass and gforces
+	* editable frequency of save
+
