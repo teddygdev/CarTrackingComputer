@@ -1,0 +1,5 @@
+Adafruit_CharLCD.egg-info/PKG-INFO
+Adafruit_CharLCD.egg-info/SOURCES.txt
+Adafruit_CharLCD.egg-info/dependency_links.txt
+Adafruit_CharLCD.egg-info/requires.txt
+Adafruit_CharLCD.egg-info/top_level.txt

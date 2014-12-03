@@ -123,4 +123,31 @@ hwclock -s`
 	* status led
 	* saving gps and compass and gforces
 	* editable frequency of save
+26. Setup a cron job for mainScript http://unix.stackexchange.com/questions/57852/crontab-job-start-1-min-after-reboot
+27. Test out the gathered data with excel
+28. Work on 3g again to fix it, this time wvdial https://www.thefanclub.co.za/how-to/how-setup-usb-3g-modem-raspberry-pi-using-usbmodeswitch-and-wvdial
+	* ID 19d2:0031 ZTE WCDMA Technologies MSM MF110/MF627/MF636
+	* this is what we need to initiat a modeswitch without soft reset
+	* 0031
+	  * # ZTE MF637
+	  * TargetVendor=  0x19d2
+	  * TargetProduct= 0x0094
+	  * MessageContent="5553424312345678000000000000061b000000020000000000000000000000"
+	  * NeedResponse=1
+	* 2000
+	  * # ZTE devices
 
+	  * TargetVendor=   0x19d2
+	  * TargetProductList="0001,0002,0015,0016,0017,0031,0037,0052,0055,0061,0063,0064,$
+
+	  * MessageContent="5553424312345678000000000000061e000000000000000000000000000000"
+	  * MessageContent2="5553424312345679000000000000061b000000020000000000000000000000"
+	  * MessageContent3="55534243123456702000000080000c85010101180101010101000000000000"
+
+	  * NeedResponse=1
+	* end up using modeswitch for switching modes and back to sakis, because wvdial doesn't assign dns if connected to eth0, so no ssh 
+29. Implement backend restful API using nodejs
+
+
+
+https://www.google.com/maps/d/viewer?mid=z0t5BDVNdbNs.klKsSK28GlPs
