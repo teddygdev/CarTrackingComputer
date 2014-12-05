@@ -1,0 +1,90 @@
+<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
+	<ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'" click="'onClick'" doCluster="'true'" clusterOptions="map.clusterOptions" ng-if="radioMarkers=='Yes'">
+		<ui-gmap-windows show="show">
+                <div ng-non-bindable>{{title}}</div>
+        </ui-gmap-windows>
+    </ui-gmap-markers>
+    <<ui-gmap-polylines models="polylines" path="'path'" stroke="'stroke'" visible="'visible'" geodesic="'geodesic'" fit="false" editable="'editable'" draggable="'draggable'" icons="'icons'" ng-if="radioLines=='Yes'">
+    </ui-gmap-polylines>
+</ui-gmap-google-map>
+<p></p>
+<div class="row">
+	<div class="col-md-3">
+		<label class="control-label">&nbsp Show Markers: &nbsp</label>
+		<div class="btn-group">
+			<label class="btn btn-primary" ng-model="radioMarkers" btn-radio="'No'">No</label>
+			<label class="btn btn-primary" ng-model="radioMarkers" btn-radio="'Yes'">Yes</label>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<label class="control-label">&nbsp Show Lines: &nbsp</label>
+		<div class="btn-group">
+			<label class="btn btn-primary" ng-model="radioLines" btn-radio="'No'">No</label>
+			<label class="btn btn-primary" ng-model="radioLines" btn-radio="'Yes'">Yes</label>
+		</div>
+	</div>
+	<div class="col-md-1">
+		<label>Cluster Min. Size:</label>
+	</div>
+	<div class="col-md-2">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="clustIncr(false)"> - </button>
+	      </span>
+	      <input type="text" class="form-control" ng-model="clusterSize" ng-change="map.clusterOptions.minimumClusterSize=clusterSize">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="clustIncr(true)"> + </button>
+	      </span>
+	    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+	<div class="col-md-2">
+		<label class="control-label">Auto Refresh</label>
+		<div class="btn-group">
+			<label class="btn btn-primary" ng-model="radioRefresh" btn-radio="'Off'">Off</label>
+			<label class="btn btn-primary" ng-model="radioRefresh" btn-radio="'On'">On</label>
+		</div>
+	</div>
+	
+	
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+		<label class="control-label">&nbsp Sort By: &nbsp</label>
+		<div class="btn-group">
+			<label class="btn btn-primary" ng-model="radioSort" btn-radio="'timestamp'">Time Stamp</label>
+			<label class="btn btn-primary" ng-model="radioSort" btn-radio="'pkey'">Index</label>
+			<label class="btn btn-primary" ng-model="radioSort" btn-radio="'speed'">Speed</label>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<label class="control-label">&nbsp Order: &nbsp</label>
+		<div class="btn-group">
+			<label class="btn btn-primary" ng-model="radioOrder" btn-radio="'desc'">Descending</label>
+			<label class="btn btn-primary" ng-model="radioOrder" btn-radio="'asc'">Ascending</label>
+		</div>
+	</div>
+	<div class="col-md-1">
+		<label>Amount of Records:</label>
+	</div>
+	<div class="col-md-2">
+	    <div class="input-group">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="recordIncr(false)"> - </button>
+	      </span>
+	      <input type="text" class="form-control" ng-model="recordSize">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button" ng-click="recordIncr(true)"> + </button>
+	      </span>
+	    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->
+	<div class="col-md-2">
+		<button class="btn btn-success" ng-click="newQuery()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Perform Query</button>
+	</div>
+
+</div>
+<div class="row">
+	<div class="col-md-11">
+		<p ng-repeat="event in events">{{event}}</p>
+	</div>
+</div>

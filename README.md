@@ -146,7 +146,10 @@ hwclock -s`
 
 	  * NeedResponse=1
 	* end up using modeswitch for switching modes and back to sakis, because wvdial doesn't assign dns if connected to eth0, so no ssh 
-29. Implement backend restful API using nodejs
+29. Implement backend restful API using PHP https://github.com/alixaxel/ArrestDB
+	* modify htaccess file
+30. Modify MainScript to upload via 3g to server backend http://fusion94.org/lcdchargen/
+31. Create frontend for the backend
 
 
 
